@@ -1,2 +1,68 @@
-# Enterprise-Meeting-Minutes-Generator-with-Action-Tracking
-AI tool that turns meeting transcripts into summaries, actions, and decisions.
+# ðŸ“˜ Enterprise Meeting Minutes Multi-Agent System
+### Automated Meeting Summary â€¢ Action Extraction â€¢ Decision Detection  
+Built with a Planner â†’ Worker â†’ Evaluator AI architecture
+
+## ðŸ“Œ Overview
+This project is an **Enterprise-grade Multi-Agent AI System** that converts raw meeting transcripts into:
+- Concise summaries  
+- Action items (task, owner, due date)  
+- Decisions made  
+- Structured JSON minutes  
+
+It uses a **Planner â†’ Worker â†’ Evaluator pipeline**, suitable for Kaggle Capstone submissions and Hugging Face Spaces.
+
+## ðŸ§  Multi-Agent Architecture
+
+### 1. Planner Agent
+- Splits transcript into chunks  
+- Creates tasks: summarize, extract_actions, extract_decisions  
+
+### 2. Worker Agent
+- Executes tasks  
+- Runs summarizer and regex-based action/decision extraction  
+
+### 3. Evaluator Agent
+- Merges results  
+- Removes duplicates  
+- Produces final meeting minutes JSON  
+
+## ðŸ“‚ Project Structure
+project/  
+â€¢ agents/ (planner, worker, evaluator)  
+â€¢ tools/ (summarizer, regex extractors)  
+â€¢ memory/ (session memory)  
+â€¢ core/ (context, logging, protocol)  
+â€¢ main_agent.py  
+â€¢ app.py  
+â€¢ run_demo.py  
+â€¢ requirements.txt  
+
+## ðŸš€ How to Run
+### Demo:
+python project/run_demo.py  
+
+### Programmatic:
+from project.main_agent import run_agent  
+print(run_agent("Hello!"))  
+
+## ðŸ“¦ Install
+pip install -r project/requirements.txt  
+
+## ðŸ§ª Example Transcript
+Tom: I will send the invoice.
+
+## âœ” Example Output
+{
+  "summary": "Tom: I will send the invoice.",
+  "actions": [{"text": "Tom: I will send the invoice."}],
+  "decisions": []
+}
+
+## ðŸŽ¯ Use Cases
+- Kaggle Capstone  
+- Enterprise AI agents  
+- Meeting automation tools  
+- Multi-agent experimentation  
+
+## ðŸ“„ License
+For educational use.
