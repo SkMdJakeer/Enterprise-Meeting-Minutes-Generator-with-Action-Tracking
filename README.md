@@ -1,21 +1,21 @@
-# ðŸ“˜ Enterprise Meeting Minutes Multi-Agent System
-### Automated Meeting Summary â€¢ Action Extraction â€¢ Decision Detection  
-Built with a Planner â†’ Worker â†’ Evaluator AI architecture
+# 📘 Enterprise Meeting Minutes Multi-Agent System
+### Automated Meeting Summary • Action Extraction • Decision Detection  
+Built with a Planner → Worker → Evaluator AI architecture
 
-## ðŸ“Œ Overview
+## 📌 Overview
 This project is an **Enterprise-grade Multi-Agent AI System** that converts raw meeting transcripts into:
 - Concise summaries  
 - Action items (task, owner, due date)  
 - Decisions made  
 - Structured JSON minutes  
 
-It uses a **Planner â†’ Worker â†’ Evaluator pipeline**, suitable for Kaggle Capstone submissions and Hugging Face Spaces.
+It uses a **Planner → Worker → Evaluator pipeline**, suitable for Kaggle Capstone submissions and Hugging Face Spaces.
 
-## ðŸ§  Multi-Agent Architecture
+## 🧠 Multi-Agent Architecture
 
 ### 1. Planner Agent
 - Splits transcript into chunks  
-- Creates tasks: summarize, extract_actions, extract_decisions  
+- Creates tasks: `summarize`, `extract_actions`, `extract_decisions`
 
 ### 2. Worker Agent
 - Executes tasks  
@@ -26,43 +26,56 @@ It uses a **Planner â†’ Worker â†’ Evaluator pipeline**, suitable for 
 - Removes duplicates  
 - Produces final meeting minutes JSON  
 
-## ðŸ“‚ Project Structure
-project/  
-â€¢ agents/ (planner, worker, evaluator)  
-â€¢ tools/ (summarizer, regex extractors)  
-â€¢ memory/ (session memory)  
-â€¢ core/ (context, logging, protocol)  
-â€¢ main_agent.py  
-â€¢ app.py  
-â€¢ run_demo.py  
-â€¢ requirements.txt  
+## 📂 Project Structure
+```
+project/
+  agents/ (planner, worker, evaluator)
+  tools/ (summarizer, regex extractors)
+  memory/ (session memory)
+  core/ (context, logging, protocol)
+  main_agent.py
+  app.py
+  run_demo.py
+  requirements.txt
+```
 
-## ðŸš€ How to Run
+## 🚀 How to Run
+
 ### Demo:
-python project/run_demo.py  
+```
+python project/run_demo.py
+```
 
 ### Programmatic:
-from project.main_agent import run_agent  
-print(run_agent("Hello!"))  
+```python
+from project.main_agent import run_agent
+print(run_agent("Hello!"))
+```
 
-## ðŸ“¦ Install
-pip install -r project/requirements.txt  
+## 📦 Install
+```
+pip install -r project/requirements.txt
+```
 
-## ðŸ§ª Example Transcript
+## 🧾 Example Transcript
+```
 Tom: I will send the invoice.
+```
 
-## âœ” Example Output
+## ✔ Example Output
+```json
 {
   "summary": "Tom: I will send the invoice.",
   "actions": [{"text": "Tom: I will send the invoice."}],
   "decisions": []
 }
+```
 
-## ðŸŽ¯ Use Cases
+## 🎯 Use Cases
 - Kaggle Capstone  
 - Enterprise AI agents  
 - Meeting automation tools  
 - Multi-agent experimentation  
 
-## ðŸ“„ License
+## 📄 License
 For educational use.
