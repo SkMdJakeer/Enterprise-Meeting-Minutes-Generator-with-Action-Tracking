@@ -1,0 +1,62 @@
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.env.* 
+*.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Packages / build artifacts
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Project Archives
+project.zip
+
+# FastAPI and runtime files
+*.db
+*.sqlite
+*.sqlite3
+
+# Hugging Face Spaces / temp
+tmp/
+cache/
+hf_cache/
+
+# Temporary text outputs / debug files
+*.txt
+*.tmp
+
+# Model files (if added later)
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Data dumps
+project/data/
+*.jsonl
+
+# Python bytecode
+**/__pycache__/
